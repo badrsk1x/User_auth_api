@@ -40,7 +40,7 @@ class LoginController extends Controller
 
     public function sendLoginResponse(Request $request, $token){
 
-        // Удалитеяем блокировки входа для учетных данных данного пользователя.
+        // Удаляем блокировки входа для учетных данных пользователя.
         $this->clearLoginAttempts($request);
         return $this->authenticated($token);
     }
